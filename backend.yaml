@@ -48,10 +48,9 @@
       login_password: ExpenseApp@1
       login_host: 172.31.27.46
       target: /app/schema/backend.sql
-      
   - name: restart and reload
-    ansible.buildin.systemd_service:
+    ansible.builtin.systemd_service:
       enabled: true
       state: restarted
-      dameon_reload: true
+      daemon_reload: true
       name: backend
