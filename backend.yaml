@@ -26,3 +26,11 @@
       src:  /tmp/backend.zip
       dest: /app
       remote_src: yes
+  - name: Install Dependencies
+    community.general.npm:
+      path: /app
+  - name: copy backendservice
+    ansible.builtin.copy:
+      src:  backend.service
+      dest: /etc/systemd/system/backend.service
+      
